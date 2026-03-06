@@ -1,5 +1,4 @@
 # Crosshair overlay (Python)
-
 Simples overlay de mira com PyQt5. Desenha dois círculos concêntricos (apenas contorno) sobre um fundo transparente.
 
 Dependências
@@ -13,9 +12,6 @@ Uso
 - Feche a janela com `F2` encerrar o aplicativo.
 
 # PARA USUÁRIOS EXPERIENTES
-
-A versão de build está hospedada em meu drive (https://drive.google.com/drive/folders/1k04wLsyP_1K3i1Xitmxolts2KMHoUPrF?usp=sharing) caso deseje checar o source. C:
-
 Instalação
 
 ```bash
