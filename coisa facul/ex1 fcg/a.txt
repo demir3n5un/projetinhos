@@ -1,0 +1,68 @@
+import numpy as np
+
+class vetor:
+    tamanho = None
+
+    def __init__(self, *valores):
+        if len(valores) != self.tamanho:
+            raise ValueError(f"Este vetor precisa de {self.tamanho} valores para ser criado.")
+        
+        self.valores = np.array(valores)
+
+    def __str__(self):
+        return f"{self.__class__.__name__}{tuple(self.valores.tolist())}"
+
+    def soma(self, outro):
+        return self.__class__(*(self.valores + outro.valores).tolist())
+
+    def escalar(self, k):
+        return self.__class__(*(self.valores * k).tolist())
+
+'''
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+
+    def __add__(self, other):
+        return vetor(self.x + other.x, self.y + other.y)
+
+    def __sub__(self, other):
+        return vetor(self.x - other.x, self.y - other.y)
+
+    def __mul__(self, scalar):
+        return vetor(self.x * scalar, self.y * scalar)
+
+    def __truediv__(self, scalar):
+        return vetor(self.x / scalar, self.y / scalar)
+
+    def magnitude(self):
+        return np.sqrt(self.x**2 + self.y**2)
+
+    def normalize(self):
+        mag = self.magnitude()
+        if mag == 0:
+            return vetor(0, 0)
+        return self / mag
+
+    def dot(self, other):
+        return self.x * other.x + self.y * other.y
+
+    def __repr__(self):
+        return f'vetor({self.x}, {self.y})'
+'''
+
+class vet2(vetor):
+    size = 2
+
+class vet3(vetor):
+    size = 3
+
+class vet4(vetor):
+    size = 4
+
+v1 = vet2(1, 2)
+v2 = vet2(3, 4)
+
+print(v1)
+print(v2)
+print(v1.soma(v2))
