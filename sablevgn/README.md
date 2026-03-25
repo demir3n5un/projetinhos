@@ -1,1 +1,0 @@
-Esse negócio foi feito com I.A como meme, mas ficou até bom e funcional
